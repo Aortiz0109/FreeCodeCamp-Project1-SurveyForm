@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Survey Form</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+  
+  </head>
+  <body>
+    <main>
+        <section class="header">
+        <h1 id="title">Dave's Burger Shop Survey</h1>
+        <p id="description">Thank you! For taking the time to fill out this survey.</p>
+        </section>
+
+        <form id="survey-form" method="post" action="">
+            <fieldset>
+              <label id="name-label" class="label-style-1" for="name">Name <input id="name" class="form-style-1" name="name" type="text" placeholder="Enter your name" required /></label>
+              <label id="email-label" class="label-style-1" for="email">Email <input id="email" class="form-style-1" name="email" type="email" placeholder="Enter your Email" required /></label>
+              <label id="number-label" class="label-style-1" for="number">Age <span class="clue">(optional)</span> <input id="number" class="form-style-1" type="number" name="age" min="13" max="120" placeholder="Age" /></label>
+            </fieldset>      
+            
+            <fieldset>
+              <legend>From 1 to 5, how do you rate our food?</legend>
+              <label class="horizontal"><input value="rate1" type="radio" name="rating-check" class="input-radio"  /> 1</label>
+              <label class="horizontal"><input value="rate2" type="radio" name="rating-check" class="input-radio" /> 2</label>
+              <label class="horizontal"><input value="rate3" type="radio" name="rating-check" class="input-radio" checked /> 3</label>
+              <label class="horizontal"><input value="rate4" type="radio" name="rating-check" class="input-radio" /> 4</label>
+              <label class="horizontal"><input value="rate5" type="radio" name="rating-check" class="input-radio" /> 5</label>
+            </fieldset>
+      
+            <fieldset>
+              <label id="dropdown-label" class="label-style-1" for="revisit">How are you likely to choose us again?
+                <select id="dropdown" class="form-style-1" name="revisit">
+                  <option value="">How likely?</option>
+                  <option value="1">Very Likely</option>
+                  <option value="2">Likely</option>
+                  <option value="3">Unlikely</option>
+                  <option value="4">Very Unlikely</option>
+                </select>
+              </label>
+            </fieldset>
+      
+            <fieldset>
+              <legend>Generally, with whom do you come here?</legend>
+              <label><input value="alone" type="radio" name="diet-check" class="input-radio" checked /> Alone</label>
+              <label><input value="friends" type="radio" name="diet-check" class="input-radio" /> Friends</label>
+              <label><input value="family" type="radio" name="diet-check" class="input-radio" /> Family</label>
+            </fieldset>
+      
+            <fieldset>
+              <legend>Which other fast food chains do you prefer? <span class="clue">(Check all that apply)</span></legend>
+                <label>
+                  <input class="input-checkbox" value="mcdonald" type="checkbox" name="prefer" />McDonald's
+                </label>
+                <label>
+                  <input class="input-checkbox" value="burger-king" type="checkbox" name="prefer" />Burger King
+                </label>
+                <label>
+                  <input class="input-checkbox" value="wendys" type="checkbox" name="prefer" />Wendy's
+                </label>
+                <label>
+                  <input class="input-checkbox" value="arbys" type="checkbox" name="prefer" />Arby's
+                </label>
+                <label>
+                  <input class="input-checkbox" value="chick-fil-a" type="checkbox" name="prefer" />Chick-fil-A
+                </label>
+                <label>
+                  <input class="input-checkbox" value="five-guys" type="checkbox" name="prefer" />Five Guy's
+                </label>
+            </fieldset>
+      
+            <fieldset>
+              <label for="fav-meal" class="label-style-1">Which dish do you like the most?
+                <textarea id="fav-meal" name="fav-meal" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+              </label>
+            </fieldset>
+      
+            <input id="submit" type="submit" value="Submit" />
+      
+        </form>
+    </main>
+    
+  </body>
+</html>
